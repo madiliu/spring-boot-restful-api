@@ -73,7 +73,6 @@ public class CurrencyServiceImpl implements CurrencyService {
   public CoinDeskDTO convertCoinDeskData() throws ParseException {
     CoinDeskData rawData = getCoinDeskData();
     CoinDeskTime rawUpdateTime = rawData.getTime();
-    CoinDeskBpi bpi = rawData.getBpi();
     String formatUpdateUTC = formatDate(rawUpdateTime.getUpdated(), UTC_DATE_FORMAT, "UTC");
     String formatUpdateISO = formatDate(rawUpdateTime.getUpdatedISO(), ISO_DATE_FORMAT, "");
     String formatUpdateBST = formatDate(rawUpdateTime.getUpdateduk(), BST_DATE_FORMAT, "BST");

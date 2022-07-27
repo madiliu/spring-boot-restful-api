@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "coin")
+@Table(name = "currency")
 public class CurrencyPO implements Serializable {
 
   @Id

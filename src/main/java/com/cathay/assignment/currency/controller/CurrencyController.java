@@ -41,7 +41,7 @@ public class CurrencyController extends RestControllerAbstract {
     try {
       return success(service.getCoinDeskData());
     } catch (Exception e) {
-      log.error(("Call failed, error message: {}"), Arrays.toString(e.getStackTrace()));
+      log.error(("Call failed, error details: {}"), Arrays.toString(e.getStackTrace()));
       return fail(
           HttpStatus.INTERNAL_SERVER_ERROR,
           "Failed to call the coindesk api, " + Arrays.toString(e.getStackTrace()));
@@ -62,7 +62,7 @@ public class CurrencyController extends RestControllerAbstract {
       log.error(("Insert failed with RuntimeException, error message: {}"), e.getMessage());
       return fail(HttpStatus.BAD_REQUEST, e.getMessage() + ", please provide the valid input");
     } catch (Exception e) {
-      log.error(("Insert failed, error message: {}"), Arrays.toString(e.getStackTrace()));
+      log.error(("Insert failed, error details: {}"), Arrays.toString(e.getStackTrace()));
       return fail(
           HttpStatus.INTERNAL_SERVER_ERROR,
           "Failed to insert the coindesk data, error details: "
@@ -84,10 +84,10 @@ public class CurrencyController extends RestControllerAbstract {
       log.error(("Convert failed with ParseException, error message: {}"), e.getMessage());
       return fail(HttpStatus.BAD_REQUEST, e.getMessage() + ", please insert the data firstly");
     } catch (Exception e) {
-      log.error(("Convert failed, error message: {}"), Arrays.toString(e.getStackTrace()));
+      log.error(("Convert failed, error details: {}"), Arrays.toString(e.getStackTrace()));
       return fail(
           HttpStatus.INTERNAL_SERVER_ERROR,
-          "Failed to convert the coindesk api, error details: "
+          "Failed to convert the coindesk data, error details: "
               + Arrays.toString(e.getStackTrace()));
     }
   }
@@ -107,7 +107,7 @@ public class CurrencyController extends RestControllerAbstract {
       log.error(("Find failed with RuntimeException, error message: {}"), e.getMessage());
       return fail(HttpStatus.NOT_FOUND, e.getMessage() + ", please provide the valid code");
     } catch (Exception e) {
-      log.error(("Find failed, error message: {}"), Arrays.toString(e.getStackTrace()));
+      log.error(("Find failed, error details: {}"), Arrays.toString(e.getStackTrace()));
       return fail(
           HttpStatus.INTERNAL_SERVER_ERROR,
           "Failed to find the currency, error details " + Arrays.toString(e.getStackTrace()));
@@ -130,7 +130,7 @@ public class CurrencyController extends RestControllerAbstract {
       log.error(("Insert failed with RuntimeException, error message: {}"), e.getMessage());
       return fail(HttpStatus.BAD_REQUEST, e.getMessage() + ", please provide the valid input");
     } catch (Exception e) {
-      log.error(("Insert failed, error message: {}"), Arrays.toString(e.getStackTrace()));
+      log.error(("Insert failed, error details: {}"), Arrays.toString(e.getStackTrace()));
       return fail(
           HttpStatus.INTERNAL_SERVER_ERROR,
           "Failed to insert the currency, error details: " + Arrays.toString(e.getStackTrace()));
@@ -154,7 +154,7 @@ public class CurrencyController extends RestControllerAbstract {
       log.error(("Update failed with RuntimeException, error message: {}"), e.getMessage());
       return fail(HttpStatus.BAD_REQUEST, e.getMessage() + ", please provide the valid code");
     } catch (Exception e) {
-      log.error(("Update failed, error message: {}"), Arrays.toString(e.getStackTrace()));
+      log.error(("Update failed, error details: {}"), Arrays.toString(e.getStackTrace()));
       return fail(
           HttpStatus.INTERNAL_SERVER_ERROR,
           "Failed to update the currency, error details: " + Arrays.toString(e.getStackTrace()));
@@ -176,7 +176,7 @@ public class CurrencyController extends RestControllerAbstract {
       log.error(("Delete failed with RuntimeException, error message: {}"), e.getMessage());
       return fail(HttpStatus.BAD_REQUEST, e.getMessage() + ", please provide the valid code");
     } catch (Exception e) {
-      log.error(("Delete failed, error message: {}"), Arrays.toString(e.getStackTrace()));
+      log.error(("Delete failed, error details: {}"), Arrays.toString(e.getStackTrace()));
       return fail(
           HttpStatus.INTERNAL_SERVER_ERROR,
           "Failed to delete the currency, error details: " + Arrays.toString(e.getStackTrace()));

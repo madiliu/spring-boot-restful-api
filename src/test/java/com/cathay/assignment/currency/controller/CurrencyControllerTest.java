@@ -143,8 +143,8 @@ public class CurrencyControllerTest {
     assertThat(result)
         .extracting(ResponseEntity::getBody)
         .extracting(RestResults::getData)
-        .extracting("symbol", "rate", "chineseName", "description")
-        .contains("$", BigDecimal.valueOf(0.00), "測試", "United States Dollar");
+        .extracting("rate", "chineseName", "description")
+        .contains(BigDecimal.valueOf(0.00), "測試", "United States Dollar");
   }
 
   @Test
