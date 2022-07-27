@@ -158,9 +158,9 @@
 ### `GET: /api/currency/{code}`
 #### Description: 輸入幣別代碼，回傳 DB 中的幣別資訊
 #### Parameters
-| No  | Param             | Description               | Data Type           | Required  | Default     | Example         |
-|---- |-----------------  |-------------------------  |-------------------- |---------- |------------ |---------------  |
-| 1   | code      | 幣別代碼| String               | Y         |             |  USD            |
+| No  | Param             | Description               | Data Type           | Required  |  Example         |
+|---- |-----------------  |-------------------------  |-------------------- |----------  |---------------  |
+| 1   | code      | 幣別代碼| String               | Y                   |  USD            |
 
 #### Response Body
 ##### 200 OK
@@ -200,13 +200,9 @@
 | No  | Param             | Description               | Data Type           | Required      | Example         |
 |---- |-----------------  |-------------------------  |-------------------- |----------  |---------------  |
 | 1   | code      | 代碼| String               | Y                     |  JPY           |
-
 | 2   | chineseName     | 中文名稱| String               | Y                     |  日幣           |
-
 | 3   | symbol      | 符號| String               | Y                      |  ¥            |
-
 | 4   | rate      | 匯率| BigDecimal               | Y                     |  40.0            |
-
 | 5   | description     | 描述| String               | Y                      |  United States Dollar           |
 
 
@@ -247,13 +243,9 @@
 | No  | Param             | Description               | Data Type           | Required     | Example         |
 |---- |-----------------  |-------------------------  |-------------------- |---------- |---------------  |
 | 1   | code      | 代碼| String               | Y                     |  JPY           |
-
 | 2   | chineseName     | 中文名稱| String               |                      |  測試           |
-
 | 3   | symbol      | 符號| String               |                       |  ~            |
-
 | 4   | rate      | 匯率| BigDecimal               |                       |  0.0            |
-
 | 5   | description     | 描述| String               |                      |  Test          |
 
 
