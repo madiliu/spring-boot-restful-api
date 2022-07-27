@@ -1,7 +1,7 @@
 # Cathay_Assignment_Currency
 
 ## [01] 呼叫 coindesk API
-### `GET: /api/currency/coinDesk/getData`
+### `GET: /api/currency/coinDesk/get`
 #### Description: 呼叫 coindesk api，回傳原始幣別資訊
 #### Parameters: no parameters
 #### Response Body
@@ -52,7 +52,7 @@
 
 
 ## [02] 新增 coindesk API 內容
-### `POST: /api/currency/coinDesk/insertData`
+### `POST: /api/currency/coinDesk/insert`
 #### Description: 呼叫 coindesk api 並將其資料寫入 DB，回傳新增內容（一次性使用）
 #### Parameters: no parameters
 #### Response Body
@@ -106,7 +106,7 @@
 ```
 
 ## [03] 資轉 coindesk API 內容
-### `GET: /api/currency/coinDesk/convertData`
+### `GET: /api/currency/coinDesk/convert`
 #### Description: 呼叫 coindesk api，進行資料轉換，回傳新組成的幣別資訊
 #### Parameters: no parameters
 #### Response Body
