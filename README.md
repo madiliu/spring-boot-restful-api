@@ -160,7 +160,7 @@
 #### Parameters
 | No  | Param             | Description               | Data Type           | Required  |  Example         |
 |---- |-----------------  |-------------------------  |-------------------- |----------  |---------------  |
-| 1   | code      | 幣別代碼| String               | Y                   |  USD            |
+| 1   | code      | 代碼| String               | Y                   |  USD            |
 
 #### Response Body
 ##### 200 OK
