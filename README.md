@@ -2,10 +2,10 @@
 
 ## [01] 呼叫 coindesk API
 ### `GET: /api/currency/coinDesk/get`
-#### Description: 呼叫 coindesk api，回傳原始幣別資訊
-#### Parameters: no parameters
-#### Response Body
-##### 200 OK
+### Description: 呼叫 coindesk api，回傳原始幣別資訊
+### Parameters: no parameters
+### Response Body
+#### 200 OK
 ```json
 {
     "data": {
@@ -43,7 +43,7 @@
 }
 ```
 
-##### 500 Internal Server Error
+#### 500 Internal Server Error
 ```json
 {
     "data": "Failed to call the coindesk api, error details: ...."
@@ -53,10 +53,10 @@
 
 ## [02] 新增 coindesk API 內容
 ### `POST: /api/currency/coinDesk/insert`
-#### Description: 呼叫 coindesk api 並將其資料寫入 DB，回傳新增內容（一次性使用）
-#### Parameters: no parameters
-#### Response Body
-##### 200 OK
+### Description: 呼叫 coindesk api 並將其資料寫入 DB，回傳新增內容（一次性使用）
+### Parameters: no parameters
+### Response Body
+#### 200 OK
 ```json
 {
     "data": [
@@ -91,14 +91,14 @@
 }
 ```
 
-##### 400 Bad Request
+#### 400 Bad Request
 ```json
 {
     "data": "Currency already exists, please provide the valid input"
 }
 ```
 
-##### 500 Internal Server Error
+#### 500 Internal Server Error
 ```json
 {
     "data": "Failed to insert the coindesk data, error details: ...."
@@ -107,10 +107,10 @@
 
 ## [03] 資轉 coindesk API 內容
 ### `GET: /api/currency/coinDesk/convert`
-#### Description: 呼叫 coindesk api，進行資料轉換，回傳新組成的幣別資訊
-#### Parameters: no parameters
-#### Response Body
-##### 200 OK
+### Description: 呼叫 coindesk api，進行資料轉換，回傳新組成的幣別資訊
+### Parameters: no parameters
+### Response Body
+#### 200 OK
 ```json
 {
     "data": {
@@ -140,14 +140,14 @@
 }
 ```
 
-##### 400 Bad Request
+#### 400 Bad Request
 ```json
 {
     "data": "Coindesk data has not been inserted, please insert the data firstly"
 }
 ```
 
-##### 500 Internal Server Error
+#### 500 Internal Server Error
 ```json
 {
     "data": "Failed to convert the coindesk api, error details: ...."
@@ -156,14 +156,14 @@
 
 ## [04] 查詢
 ### `GET: /api/currency/{code}`
-#### Description: 輸入幣別代碼，回傳 DB 中的幣別資訊
-#### Parameters
+### Description: 輸入幣別代碼，回傳 DB 中的幣別資訊
+### Parameters
 | No  | Param             | Description               | Data Type           | Required  |  Example         |
 |---- |-----------------  |-------------------------  |-------------------- |----------  |---------------  |
 | 1   | code      | 幣別代碼| String               | Y                   |  USD            |
 
-#### Response Body
-##### 200 OK
+### Response Body
+#### 200 OK
 ```json
 {
     "data": {
@@ -178,14 +178,14 @@
 }
 ```
 
-##### 400 Bad Request
+#### 400 Bad Request
 ```json
 {
     "data": "Currency does not exist, please provide the valid code"
 }
 ```
 
-##### 500 Internal Server Error
+#### 500 Internal Server Error
 ```json
 {
     "data": "Failed to find the currency, error details: ...."
@@ -195,8 +195,8 @@
 
 ## [05] 新增
 ### `POST: /api/currency`
-#### Description: 輸入單一幣別資訊以新增資料至 DB，回傳 DB 中新增的幣別資訊
-#### Parameters
+### Description: 輸入單一幣別資訊以新增資料至 DB，回傳 DB 中新增的幣別資訊
+### Parameters
 | No  | Param             | Description               | Data Type           | Required      | Example         |
 |---- |-----------------  |-------------------------  |-------------------- |----------  |---------------  |
 | 1   | code      | 代碼| String               | Y                     |  JPY           |
@@ -206,8 +206,8 @@
 | 5   | description     | 描述| String               | Y                      |  Japanese Yen           |
 
 
-#### Response Body
-##### 200 OK
+### Response Body
+#### 200 OK
 ```json
 {
     "data": {
@@ -222,14 +222,14 @@
 }
 ```
 
-##### 400 Bad Request
+#### 400 Bad Request
 ```json
 {
     "data": "Currency already exist, please provide the valid input"
 }
 ```
 
-##### 500 Internal Server Error
+#### 500 Internal Server Error
 ```json
 {
     "data": "Failed to insert the currency, error details: ...."
@@ -238,8 +238,8 @@
 
 ## [06] 更新
 ### `PUT: /api/currency/{code}`
-#### Description: 輸入欲更新的單一幣別資訊以修改 DB，回傳 DB 中更新後的幣別資訊
-#### Parameters
+### Description: 輸入欲更新的單一幣別資訊以修改 DB，回傳 DB 中更新後的幣別資訊
+### Parameters
 | No  | Param             | Description               | Data Type           | Required     | Example         |
 |---- |-----------------  |-------------------------  |-------------------- |---------- |---------------  |
 | 1   | code      | 代碼| String               | Y                     |  JPY           |
@@ -249,8 +249,8 @@
 | 5   | description     | 描述| String               |                      |  Test          |
 
 
-#### Response Body
-##### 200 OK
+### Response Body
+#### 200 OK
 ```json
 {
     "data": {
@@ -265,14 +265,14 @@
 }
 ```
 
-##### 400 Bad Request
+#### 400 Bad Request
 ```json
 {
     "data": "Currency does not exist, please provide the valid code"
 }
 ```
 
-##### 500 Internal Server Error
+#### 500 Internal Server Error
 ```json
 {
     "data": "Failed to update the currency, error details: ...."
@@ -281,29 +281,28 @@
 
 ## [07] 刪除
 ### `PUT: /api/currency/{code}`
-#### Description: 輸入幣別代碼以刪除 DB 中的幣別資訊
-#### Parameters
+### Description: 輸入幣別代碼以刪除 DB 中的幣別資訊
+### Parameters
 | No  | Param             | Description               | Data Type           | Required    | Example         |
 |---- |-----------------  |-------------------------  |-------------------- |---------- |------------ |---------------  |
 | 1   | code      | 代碼| String               | Y                    |  JPY           |
 
-
-#### Response Body
-##### 200 OK
+### Response Body
+#### 200 OK
 ```json
 {
     "data": "Deleted successfully"
 }
 ```
 
-##### 400 Bad Request
+#### 400 Bad Request
 ```json
 {
     "data": "Currency does not exist, please provide the valid code"
 }
 ```
 
-##### 500 Internal Server Error
+#### 500 Internal Server Error
 ```json
 {
     "data": "Failed to delete the currency, error details: ...."
