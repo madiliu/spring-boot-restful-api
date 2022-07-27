@@ -203,7 +203,7 @@
 | 2   | chineseName     | 中文名稱| String               | Y                     |  日幣           |
 | 3   | symbol      | 符號| String               | Y                      |  ¥            |
 | 4   | rate      | 匯率| BigDecimal               | Y                     |  40.0            |
-| 5   | description     | 描述| String               | Y                      |  United States Dollar           |
+| 5   | description     | 描述| String               | Y                      |  Japanese Yen           |
 
 
 #### Response Body
