@@ -1,4 +1,4 @@
-CREATE SEQUENCE IF NOT EXISTS id_coin_sequence
+CREATE SEQUENCE IF NOT EXISTS id_currency_sequence
     START WITH 1
     INCREMENT BY 1;
 
