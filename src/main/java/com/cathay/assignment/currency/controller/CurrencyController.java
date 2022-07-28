@@ -83,7 +83,7 @@ public class CurrencyController extends RestControllerAbstract {
       return success(service.convertCoinDeskData());
     } catch (ParseException e) {
       log.error(("Convert failed with ParseException, error message: {}"), e.getMessage());
-      return fail(HttpStatus.BAD_REQUEST, e.getMessage() + ", please insert the data firstly");
+      return fail(HttpStatus.NOT_FOUND, e.getMessage() + ", please insert the data firstly");
     } catch (Exception e) {
       log.error(("Convert failed, error details: {}"), printStackTrace(e));
       return fail(
@@ -153,7 +153,7 @@ public class CurrencyController extends RestControllerAbstract {
       return success(service.update(code, condition));
     } catch (RuntimeException e) {
       log.error(("Update failed with RuntimeException, error message: {}"), e.getMessage());
-      return fail(HttpStatus.BAD_REQUEST, e.getMessage() + ", please provide the valid code");
+      return fail(HttpStatus.NOT_FOUND, e.getMessage() + ", please provide the valid code");
     } catch (Exception e) {
       log.error(("Update failed, error details: {}"), printStackTrace(e));
       return fail(
@@ -175,7 +175,7 @@ public class CurrencyController extends RestControllerAbstract {
       return success("Deleted successfully");
     } catch (RuntimeException e) {
       log.error(("Delete failed with RuntimeException, error message: {}"), e.getMessage());
-      return fail(HttpStatus.BAD_REQUEST, e.getMessage() + ", please provide the valid code");
+      return fail(HttpStatus.NOT_FOUND, e.getMessage() + ", please provide the valid code");
     } catch (Exception e) {
       log.error(("Delete failed, error details: {}"), printStackTrace(e));
       return fail(
