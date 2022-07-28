@@ -1,7 +1,7 @@
 # Cathay_Assignment_Currency
 
 ## [01] 呼叫 coindesk API
-### `GET: /api/currency/coinDesk/getData`
+### `GET: /api/currency/coinDesk/get`
 #### Description: 呼叫 coindesk api，回傳原始幣別資訊
 #### Parameters: no parameters
 #### Response Body
@@ -52,7 +52,7 @@
 
 
 ## [02] 新增 coindesk API 內容
-### `POST: /api/currency/coinDesk/insertData`
+### `POST: /api/currency/coinDesk/insert`
 #### Description: 呼叫 coindesk api 並將其資料寫入 DB，回傳新增內容（一次性使用）
 #### Parameters: no parameters
 #### Response Body
@@ -106,7 +106,7 @@
 ```
 
 ## [03] 資轉 coindesk API 內容
-### `GET: /api/currency/coinDesk/convertData`
+### `GET: /api/currency/coinDesk/convert`
 #### Description: 呼叫 coindesk api，進行資料轉換，回傳新組成的幣別資訊
 #### Parameters: no parameters
 #### Response Body
@@ -158,9 +158,9 @@
 ### `GET: /api/currency/{code}`
 #### Description: 輸入幣別代碼，回傳 DB 中的幣別資訊
 #### Parameters
-| No  | Param             | Description               | Data Type           | Required  | Default     | Example         |
-|---- |-----------------  |-------------------------  |-------------------- |---------- |------------ |---------------  |
-| 1   | code      | 幣別代碼| String               | Y         |             |  USD            |
+| No  | Param             | Description               | Data Type           | Required  |  Example         |
+|---- |-----------------  |-------------------------  |-------------------- |----------  |---------------  |
+| 1   | code      | 代碼| String               | Y                   |  USD            |
 
 #### Response Body
 ##### 200 OK
@@ -200,14 +200,10 @@
 | No  | Param             | Description               | Data Type           | Required      | Example         |
 |---- |-----------------  |-------------------------  |-------------------- |----------  |---------------  |
 | 1   | code      | 代碼| String               | Y                     |  JPY           |
-
 | 2   | chineseName     | 中文名稱| String               | Y                     |  日幣           |
-
 | 3   | symbol      | 符號| String               | Y                      |  ¥            |
-
 | 4   | rate      | 匯率| BigDecimal               | Y                     |  40.0            |
-
-| 5   | description     | 描述| String               | Y                      |  United States Dollar           |
+| 5   | description     | 描述| String               | Y                      |  Japanese Yen           |
 
 
 #### Response Body
@@ -247,13 +243,9 @@
 | No  | Param             | Description               | Data Type           | Required     | Example         |
 |---- |-----------------  |-------------------------  |-------------------- |---------- |---------------  |
 | 1   | code      | 代碼| String               | Y                     |  JPY           |
-
 | 2   | chineseName     | 中文名稱| String               |                      |  測試           |
-
 | 3   | symbol      | 符號| String               |                       |  ~            |
-
 | 4   | rate      | 匯率| BigDecimal               |                       |  0.0            |
-
 | 5   | description     | 描述| String               |                      |  Test          |
 
 
@@ -291,10 +283,9 @@
 ### `PUT: /api/currency/{code}`
 #### Description: 輸入幣別代碼以刪除 DB 中的幣別資訊
 #### Parameters
-| No  | Param             | Description               | Data Type           | Required    | Example         |
-|---- |-----------------  |-------------------------  |-------------------- |---------- |------------ |---------------  |
+| No  | Param             | Description        | Data Type           | Required    | Example         |
+|---- |-----------------  |------------------  |-------------------- |---------- |------------ |
 | 1   | code      | 代碼| String               | Y                    |  JPY           |
-
 
 #### Response Body
 ##### 200 OK
