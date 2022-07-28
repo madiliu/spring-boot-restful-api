@@ -140,7 +140,7 @@
 }
 ```
 
-##### 400 Bad Request
+##### 404 Not Found
 ```json
 {
     "data": "Coindesk data has not been inserted, please insert the data firstly"
@@ -178,7 +178,7 @@
 }
 ```
 
-##### 400 Bad Request
+##### 404 Not Found
 ```json
 {
     "data": "Currency does not exist, please provide the valid code"
@@ -265,7 +265,7 @@
 }
 ```
 
-##### 400 Bad Request
+##### 404 Not Found
 ```json
 {
     "data": "Currency does not exist, please provide the valid code"
@@ -295,7 +295,7 @@
 }
 ```
 
-##### 400 Bad Request
+##### 404 Not Found
 ```json
 {
     "data": "Currency does not exist, please provide the valid code"
