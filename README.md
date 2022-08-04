@@ -1,4 +1,4 @@
-# Cathay_Assignment_Currency
+# Currency
 
 ## [01] 呼叫 coindesk API
 ### `GET: /api/currency/coinDesk/get`
