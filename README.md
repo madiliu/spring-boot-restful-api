@@ -7,9 +7,38 @@ A small java practice for RestTemplate, JPA & UnitTest, base on SpringBoot & H2.
 - SpringBoot: 2.1.12.RELEASE
 - application.properties
 
+#### application.properties
+Change these properties to direct your h2 db or others.
 
-## [01] Call coindesk API
-### `GET: /api/currency/coinDesk/get`
+./src/main/resources/application.properties
+
+```
+spring.datasource.url=jdbc:h2:tcp://localhost/~/Java_workspace/CurrencyPractice/h2Data/currency-sample
+spring.datasource.username=sa
+spring.datasource.password=
+```
+
+#### The Script for Postman
+Create environment parameter base_url before use.
+```
+# import file
+{baseDir}/CurrencySample/doc/CurrencySample.postman_collection.json
+```
+
+## API 
+* api.coinDesk
+* api.coindesk: insert
+* api.coindesk: convert
+* GetCurrency
+* InsertCurrency
+* UpdateCurrency
+* DeleteCurrency
+
+=====================================
+## API Documentation
+
+### [01] Call coindesk API
+#### `GET: /api/currency/coinDesk/get`
 #### Description: Call coindesk api to return the original currency information
 #### Parameters: none
 #### Response Body
@@ -59,8 +88,8 @@ A small java practice for RestTemplate, JPA & UnitTest, base on SpringBoot & H2.
 ```
 
 
-## [02] Insert coindesk API 
-### `POST: /api/currency/coinDesk/insert`
+### [02] Insert coindesk API 
+#### `POST: /api/currency/coinDesk/insert`
 #### Description: call coindesk api and insert its data to H2, return the inserted data (one-time usage)
 #### Parameters: none
 #### Response Body
@@ -113,8 +142,8 @@ A small java practice for RestTemplate, JPA & UnitTest, base on SpringBoot & H2.
 }
 ```
 
-## [03] Convert coindesk API 
-### `GET: /api/currency/coinDesk/convert`
+### [03] Convert coindesk API 
+#### `GET: /api/currency/coinDesk/convert`
 #### Description: call coindesk api to convert and return the data
 #### Parameters: none
 #### Response Body
@@ -162,8 +191,8 @@ A small java practice for RestTemplate, JPA & UnitTest, base on SpringBoot & H2.
 }
 ```
 
-## [04] Query
-### `GET: /api/currency/{code}`
+### [04] Get
+#### `GET: /api/currency/{code}`
 #### Description: query the currency information by providing currency code
 #### Parameters
 | No  | Param             | Description               | Data Type           | Required  |  Example         |
@@ -201,8 +230,8 @@ A small java practice for RestTemplate, JPA & UnitTest, base on SpringBoot & H2.
 ```
 
 
-## [05] Insert
-### `POST: /api/currency`
+### [05] Insert
+#### `POST: /api/currency`
 #### Description: insert single currency information and return the inserted data
 #### Parameters
 | No  | Param             | Description               | Data Type           | Required      | Example         |
@@ -244,8 +273,8 @@ A small java practice for RestTemplate, JPA & UnitTest, base on SpringBoot & H2.
 }
 ```
 
-## [06] Update
-### `PUT: /api/currency/{code}`
+### [06] Update
+#### `PUT: /api/currency/{code}`
 #### Description: update single currency information and return the updated data
 #### Parameters
 | No  | Param             | Description               | Data Type           | Required     | Example         |
@@ -287,8 +316,8 @@ A small java practice for RestTemplate, JPA & UnitTest, base on SpringBoot & H2.
 }
 ```
 
-## [07] Delete
-### `PUT: /api/currency/{code}`
+### [07] Delete
+#### `PUT: /api/currency/{code}`
 #### Description: delete single currency information by providing currency code
 #### Parameters
 | No  | Param             | Description        | Data Type           | Required    | Example         |
