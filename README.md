@@ -1,9 +1,17 @@
 # Currency
+A small java practice for RestTemplate, JPA & UnitTest, base on SpringBoot & H2.
 
-## [01] 呼叫 coindesk API
+### Environments
+- JDK: 1.8
+- H2: 2.1.210
+- SpringBoot: 2.1.12.RELEASE
+- application.properties
+
+
+## [01] Call coindesk API
 ### `GET: /api/currency/coinDesk/get`
-#### Description: 呼叫 coindesk api，回傳原始幣別資訊
-#### Parameters: no parameters
+#### Description: Call coindesk api to return the original currency information
+#### Parameters: none
 #### Response Body
 ##### 200 OK
 ```json
@@ -51,10 +59,10 @@
 ```
 
 
-## [02] 新增 coindesk API 內容
+## [02] Insert coindesk API 
 ### `POST: /api/currency/coinDesk/insert`
-#### Description: 呼叫 coindesk api 並將其資料寫入 DB，回傳新增內容（一次性使用）
-#### Parameters: no parameters
+#### Description: call coindesk api and insert its data to H2, return the inserted data (one-time usage)
+#### Parameters: none
 #### Response Body
 ##### 200 OK
 ```json
@@ -105,10 +113,10 @@
 }
 ```
 
-## [03] 資轉 coindesk API 內容
+## [03] Convert coindesk API 
 ### `GET: /api/currency/coinDesk/convert`
-#### Description: 呼叫 coindesk api，進行資料轉換，回傳新組成的幣別資訊
-#### Parameters: no parameters
+#### Description: call coindesk api to convert and return the data
+#### Parameters: none
 #### Response Body
 ##### 200 OK
 ```json
@@ -154,9 +162,9 @@
 }
 ```
 
-## [04] 查詢
+## [04] Query
 ### `GET: /api/currency/{code}`
-#### Description: 輸入幣別代碼，回傳 DB 中的幣別資訊
+#### Description: query the currency information by providing currency code
 #### Parameters
 | No  | Param             | Description               | Data Type           | Required  |  Example         |
 |---- |-----------------  |-------------------------  |-------------------- |----------  |---------------  |
@@ -193,9 +201,9 @@
 ```
 
 
-## [05] 新增
+## [05] Insert
 ### `POST: /api/currency`
-#### Description: 輸入單一幣別資訊以新增資料至 DB，回傳 DB 中新增的幣別資訊
+#### Description: insert single currency information and return the inserted data
 #### Parameters
 | No  | Param             | Description               | Data Type           | Required      | Example         |
 |---- |-----------------  |-------------------------  |-------------------- |----------  |---------------  |
@@ -236,9 +244,9 @@
 }
 ```
 
-## [06] 更新
+## [06] Update
 ### `PUT: /api/currency/{code}`
-#### Description: 輸入欲更新的單一幣別資訊以修改 DB，回傳 DB 中更新後的幣別資訊
+#### Description: update single currency information and return the updated data
 #### Parameters
 | No  | Param             | Description               | Data Type           | Required     | Example         |
 |---- |-----------------  |-------------------------  |-------------------- |---------- |---------------  |
@@ -279,9 +287,9 @@
 }
 ```
 
-## [07] 刪除
+## [07] Delete
 ### `PUT: /api/currency/{code}`
-#### Description: 輸入幣別代碼以刪除 DB 中的幣別資訊
+#### Description: delete single currency information by providing currency code
 #### Parameters
 | No  | Param             | Description        | Data Type           | Required    | Example         |
 |---- |-----------------  |------------------  |-------------------- |---------- |------------ |
