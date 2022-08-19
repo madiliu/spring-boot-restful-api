@@ -13,7 +13,7 @@ Change these properties to direct your h2 db or others.
 ./src/main/resources/application.properties
 
 ```
-spring.datasource.url=jdbc:h2:tcp://localhost/~/Java_workspace/CurrencyPractice/h2Data/currency-sample
+spring.datasource.url=jdbc:h2:tcp://localhost/~/Java_workspace/Currency/h2Data/currency
 spring.datasource.username=sa
 spring.datasource.password=
 ```
@@ -22,7 +22,7 @@ spring.datasource.password=
 Create environment parameter base_url before use.
 ```
 # import file
-{baseDir}/CurrencySample/doc/CurrencySample.postman_collection.json
+{baseDir}/Currency/doc/Currency.postman_collection.json
 ```
 
 ## API 
@@ -34,7 +34,7 @@ Create environment parameter base_url before use.
 * UpdateCurrency
 * DeleteCurrency
 
-=====================================
+=======================================================================================================
 ## API Documentation
 
 ### [01] Call coindesk API
