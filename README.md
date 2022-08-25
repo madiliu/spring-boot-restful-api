@@ -18,7 +18,7 @@ spring.datasource.username=sa
 spring.datasource.password=
 ```
 
-#### The Script for Postman
+#### The Script for Postman [TBU]
 Create environment parameter base_url before use.
 ```
 # import file
