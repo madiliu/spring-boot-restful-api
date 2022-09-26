@@ -22,7 +22,7 @@ spring.datasource.password=
 Create environment parameter base_url before use.
 ```
 # import file
-{baseDir}/Currency/doc/Currency.postman_collection.json
+{baseDir}/api/Currency.postman_collection.json
 ```
 
 ## API 
