@@ -18,13 +18,6 @@ spring.datasource.username=sa
 spring.datasource.password=
 ```
 
-#### The Script for Postman [TBU]
-Create environment parameter base_url before use.
-```
-# import file
-{baseDir}/api/Currency.postman_collection.json
-```
-
 ## API 
 * api.coinDesk
 * api.coindesk: insert
