@@ -1,4 +1,4 @@
-# Currency
+# currency-assignment
 A small java practice for RestTemplate, JPA & UnitTest, base on SpringBoot & H2.
 
 ### Environments
