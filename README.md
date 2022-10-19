@@ -1,4 +1,4 @@
-# currency-assignment
+# spring-boot-restful-api
 A small java practice for RestTemplate, JPA & UnitTest, base on SpringBoot & H2.
 
 ### Environments
